@@ -1,0 +1,77 @@
+
+
+.input-area{
+	height: 100%;
+	width: 220px;
+	margin: auto;
+	.flight-label{
+		width: 100%;
+		height: 70px;
+		background-color: #ddd;
+		background-image: url('/images/btn-flight.png');
+		background-position: center;
+		background-size: contain;
+		border-radius: 5px;
+		&:hover{
+			background-color: #F23193;
+		}
+		&:active{
+			background-color: #211745;
+		}
+		.active-flight{
+			background-color: #211745;
+		}
+	}
+	.hotel-label{
+		width: 100%;
+		height: 70px;
+		background-color: #ddd;
+		background-image: url('/images/btn-hotel.png');
+		background-position: center;
+		background-size: contain;
+		border-radius: 5px;
+		&:hover{
+			background-color: #F23193;
+		}
+		&:active{
+			background-color: #211745;
+		}
+		.active-hotel{
+			background-color: #211745;
+		}
+	}
+	.car-label{
+		width: 100%;
+		height: 70px;
+		background-color: #ddd;
+		background-image: url('/images/btn-car.png');
+		background-position: center;
+		background-size: contain;
+		border-radius: 5px;
+		&:hover{
+			background-color: #F23193;
+		}
+		&:active{
+			background-color: #211745;
+		}
+		.active-car{
+			background-color: #211745;
+		}
+	}
+}
+.button-area{
+	width: 100%;
+	text-align: center;
+}
+
+input[type=checkbox]{
+	visibility: hidden;
+	text-align: left;
+	width: 100%;	
+	position: relative;
+	&:checked + label{
+		width: 100%;
+		height: 70px;
+		background-color: #5cb85c;
+	}
+}

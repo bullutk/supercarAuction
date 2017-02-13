@@ -1,0 +1,43 @@
+.intro-container{
+	position: relative;
+	margin:auto;
+	overflow: hidden;
+	width:100vw;
+	height:80vh;
+
+	.overlay{
+		position:relative;
+		display:flex;
+		z-index: 1;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(180,180,225,.4);
+		.app-intro{
+			font-family: $heading;
+			color: $heading-color;
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			h1{
+				font-weight: 700;
+				font-size: 40;
+			}
+		}
+	}
+	video.fillWidth {
+	 	position: absolute;
+	 	z-index: 0;
+    	top: 50%;
+    	left: 50%;
+    	width: auto;
+    	height: auto;
+    	min-width: 100%;
+    	min-height: 100%;
+    	-webkit-transform: translate(-50%, -50%);
+       	-moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+	}
+}
