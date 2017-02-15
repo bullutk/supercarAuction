@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../public/stylesheets/styles.css';
 import MainImage from './components/MainImage.jsx';
 import DescDetBox from './components/DescDetBox';
 import NavBar from './components/NavBar';
@@ -10,10 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MainImage />
-        <ThumbnailBox />
-        <DescDetBox />
-        <NavBar />
+        {this.props.children}
       </div>
     );
   }

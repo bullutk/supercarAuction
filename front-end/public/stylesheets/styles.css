@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+/* line 4, ../../compass/sass/styles.scss */
+.main-image {
+  height: 500px;
+}
+
+/* line 9, ../../compass/sass/styles.scss */
+.App {
+  text-align: center;
+}
+
+/* line 13, ../../compass/sass/styles.scss */
+.App-logo {
+  height: 750px;
+}
+
+/* line 18, ../../compass/sass/styles.scss */
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+/* line 25, ../../compass/sass/styles.scss */
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* line 33, ../../compass/sass/styles.scss */
+.thumb-image {
+  height: 80px;
+}
