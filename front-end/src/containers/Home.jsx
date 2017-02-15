@@ -9,11 +9,23 @@ import GetHomeAction from '../actions/GetHomeAction';
 
 
 class Home extends Component{
+
+componentDidMount() {
+	this.props.getHomeData()
+}
+
 	render(){
-		this.props.getHomeData();
+		// this.props.getHomeData();
 		console.log(this.props.homeData)
+		var homeAuctions = [];
+		this.props.homeData.map((auction, index)=>{
+			homeAuctions.push(<li key={index}>{auction.carName}</li>);
+		})
 		return (
-			<h1>Home</h1>
+			<div>
+				<h1>Home</h1>
+				{homeAuctions}
+			</div>
 		)
 	}
 }
