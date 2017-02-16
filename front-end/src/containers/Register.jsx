@@ -8,33 +8,49 @@ class Register extends Component{
 		super(props);
 		this.registerForm = this.registerForm.bind(this);
 		this.state = {
-			registrationResponse: ""
+			registrationResponse: "",
+			message: ""
 		}
 	}
 
 	registerForm(event){
 		event.preventDefault();
-		this.props.registerAction({
-			username: event.target[0].value,
-			password: event.target[1].value
-		});
+		if(event.target[1].value === event.target[2].value){
+			this.props.registerAction({
+				username: event.target[0].value,
+				password: event.target[1].value,
+				email: event.target[3].value,
+				name: event.target[4].value
+			});
+		}else{
+			this.setState({
+				message: "password does not match"
+			});
+		}
+
+	}
+	componentDidUpdate(){
+		if(this.props.registerResponse.msg === "userNameTaken"){
+			this.setState({
+				message: "User name is taken"
+			})
+		}else if(this.props.registerResponse.msg === "userInserted"){
+			this.setState({
+				message: "Your account has been created!"
+			})
+		}
 	}
 
 	render(){
-		if(this.props.registerResponse.msg === "userNameTaken"){
-			var message = "User name is taken";
-		}else if(this.props.registerResponse.msg === "userInserted"){
-			var message = "Your account has been created!";
-		}else{
-			var message = "";
-		}
-
 		return (
 			<div>
-				<h1>{message}</h1>
+				<h1>{this.state.message}</h1>
 				<form onSubmit={this.registerForm}>
-					<input type="text" name="username" placeholder="UserName" />
-					<input type="password" name="password" placeholder="Password" />
+					<input type="text" placeholder="User Name" />
+					<input type="password" placeholder="Enter Password" />
+					<input type="password" placeholder="Enter Password Again" />
+					<input type="text" placeholder="Email" />
+					<input type="text" placeholder="First and Last Name" />
 					<input className="btn btn-success" type="submit" value="Register!" />
 				</form>
 			</div>

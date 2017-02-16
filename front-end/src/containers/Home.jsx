@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-// import MainImage from './components/MainImage.jsx';
-// import DescDetBox from './components/DescDetBox';
-// import NavBar from './components/NavBar';
-// import ThumbnailBox from './components/ThumbnailBox';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import GetHomeAction from '../actions/GetHomeAction';

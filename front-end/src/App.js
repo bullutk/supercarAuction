@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import '../public/stylesheets/styles.css';
-import MainImage from './components/MainImage.jsx';
-import DescDetBox from './components/DescDetBox';
 import NavBar from './components/NavBar';
-import ThumbnailBox from './components/ThumbnailBox';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component {
@@ -11,6 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         {this.props.children}
+        <NavBar />
       </div>
     );
   }

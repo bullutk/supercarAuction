@@ -3,6 +3,7 @@ import Logo from './Logo';
 import AboutUs from './AboutUs';
 import StoreNav from './StoreNav';
 import SupercarAuctionLinks from './SupercarAuctionLinks';
+import LogIn from './LogIn';
 
 class NavBar extends Component{
 	render(){
@@ -13,6 +14,7 @@ class NavBar extends Component{
 				<AboutUs />
 				<StoreNav />
 				<SupercarAuctionLinks />
+				<LogIn />
 			</div>
 		)
 	}
