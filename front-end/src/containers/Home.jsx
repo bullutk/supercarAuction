@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import GetHomeAction from '../actions/GetHomeAction';
+import Auction from '../components/Auction';
 
 
 class Home extends Component{
@@ -19,7 +20,7 @@ componentDidMount() {
 		console.log(this.props.homeData)
 		var homeAuctions = [];
 		this.props.homeData.map((auction, index)=>{
-			homeAuctions.push(<li key={index}>{auction.carName}</li>);
+			homeAuctions.push(<Auction key={index} item={auction} />);
 		})
 		return (
 			<div>
